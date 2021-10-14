@@ -27,6 +27,21 @@ body p{
     color: #7dd6ff;
 }
 
+#name {
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: normal;
+    color: skyblue;
+}
+
+#ex2:hover {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: tomato;
+    transition: all 2s;
+}
+
 #taco{
     position: absolute;
     top: 70px;

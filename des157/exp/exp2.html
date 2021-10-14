@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Experimentation 2</title>
+    <style>
+        h1{
+            font-size: 30px;
+            padding: 50px;
+        }
+        div{
+            font-size: 20px;
+            padding-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="headText">JS Experimentation 2</h1>
+    <div id='special'></div>  
+
+    <script>
+
+        var yourColor = prompt("Pick a color from: blue, red, green, orange, black", "");
+        var askColor = ['white', 'purple', 'brown', 'yellow'];
+
+        function colorPick(color){
+            if(color == 'blue'){
+                result = document.getElementById('headText').style.color = "blue";
+            }
+            else if(color == 'red'){
+                result = document.getElementById('headText').style.color = "red";
+            }
+            else if(color == 'green'){
+                result = document.getElementById('headText').style.color = "green";
+            }
+            else if(color == 'orange'){
+                result = document.getElementById('headText').style.color = "orange";
+            }
+            else {
+                result = document.getElementById('headText').style.color = "black";
+            }
+        }
+
+        function randomInt(min, max){
+            return Math.floor((max - min + 1) * Math.random()) + min;
+        }
+
+        function present(color, another){
+            var randomValue = another[randomInt(0, another.length-1)];
+                document.getElementById('special').innerHTML = `Cool, do you also like ${randomValue}?`;
+        }
+        
+        colorPick(yourColor);
+        present(yourColor, askColor);
+
+     </script>
+</body>
+</html>
