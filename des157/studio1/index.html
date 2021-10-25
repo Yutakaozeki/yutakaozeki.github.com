@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <title>Mad Lib 2.0</title>
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <h1>Bounty Generator</h1>
+
+        <main>
+            <section class="forminput">
+                <article id="madlib"></article>
+
+                <form id="myform">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name">
+                    <br>
+                    <label for="value">Value</label>
+                    <input type="text" id="value">
+                    <br>
+                    <label for="crime">Crime</label>
+                    <input type="text" id="crime">
+                    <br>
+                    <label for="capture">Pick One</label>
+                    <select name="capture" id="capture">
+                        <option value="Blank">Pick One</option>
+                        <option value="Dead">Dead</option>
+                        <option value="Alive">Alive</option>
+                    </select>
+                    <br>
+                    <label for="job">Pick One</label>
+                    <select name="job" id="job">
+                        <option value="Blank">Pick One</option>
+                        <option value="Pirate">Pirate</option>
+                        <option value="Marine">Marine</option>
+                    </select>
+                    <br>
+                    <input type="submit" value="START!" id="submit">
+                </form>
+            </section>
+
+            <section id="formoutput" class="showing">
+                <h2>WANTED</h2>
+                <img src="../studio1/images/skull.png" width="320" height="250" alt="skull" id="skull">
+                <h3>DEAD OR ALIVE</h3>
+                <p>Name</p>
+                <p>Numbers</p>
+                <img src="images/decorations.png" width="400" height="280" alt="decor" id="decor">
+                <p>job</p>
+            </section>
+            <footer>
+                <a href="https://validator.w3.org/check?uri=https://yutakaozeki.github.io/des157/studio1">HTML 5</a>
+                <a href="https://jigsaw.w3.org/css-validator/">CSS</a>
+            </footer>
+        </main>
+
+    </body>
+</html>
