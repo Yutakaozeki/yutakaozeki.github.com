@@ -3,6 +3,7 @@
     console.log('reading js');
 
     const myForm = document.querySelector('#myform');
+    const madlib = document.querySelector('#madlib');
     const madName = document.querySelector('#name');
     const madValue = document.querySelector('#value');
     const madCrime = document.querySelector('#crime');
@@ -17,31 +18,38 @@
         const capture = document.querySelector('#capture').value;
         const job = document.querySelector('#job').value;
 
+        // document.querySelector('submit').addEventListener('click', function() {
+        //     document.querySelector('#forminput').style.display = 'none';
+        //     document.querySelector('submit').style.display = 'none';
+        //     document.querySelector('#formoutput').className = "showing";
+        // })
         var formData = document.querySelectorAll("input[type=text");
         for (var eachField of formData){
             eachField.value = "";
         }
         var myText;
-        var myName;
-        var myValue;
-        var myCrime;
-        var myCapture;
-        var myJob;
+        // var myName;
+        // var myValue;
+        // var myCrime;
+        // var myCapture;
+        // var myJob;
         if(name && value && crime && capture && job){
-            myName = `${name}`;
-            myValue = `${value}`;
-            myCrime = `${crime}`;
-            myCapture = `${capture}`;
-            myJob = `${job}`
+            myText = `You have picked ${name}, ${value}, ${crime}, and ${job}`;
+            // myName = `${name}`;
+            // myValue = `${value}`;
+            // myCrime = `${crime}`;
+            // myCapture = `${capture}`;
+            // myJob = `${job}`
         }
         else{
             myText = "Please fill out the form";
         }
-        madName.innerHTML = myName;
-        madValue.innerHTML = myValue;
-        madCrime.innerHTML = myCrime;
-        madCapture.innerHTML = myCapture;
-        madJob.innerHTML = myJob;
+        madlib.innerHTML = myText;
+        // madName.innerHTML = myName;
+        // madValue.innerHTML = myValue;
+        // madCrime.innerHTML = myCrime;
+        // madCapture.innerHTML = myCapture;
+        // madJob.innerHTML = myJob;
     //     const formData = document.querySelectorAll("input[type=text]");
     //     processData(formData);
     //     // document.getElementById('overlay').className = 'showing';
