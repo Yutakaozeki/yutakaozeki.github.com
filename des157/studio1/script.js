@@ -2,85 +2,50 @@
     'use strict';
     console.log('reading js');
 
-    const myForm = document.querySelector('#myform');
-    const madlib = document.querySelector('#madlib');
-    const madName = document.querySelector('#name');
-    const madValue = document.querySelector('#value');
-    const madCrime = document.querySelector('#crime');
-    var madCapture = document.querySelector('#capture');
-    var madJob = document.querySelector('#job');
+    const myForm = document.querySelector('#myform');    
+    const nameOut = document.querySelector('#nameout');
+    const valOut = document.querySelector('#valout');
+    const crimeOut = document.querySelector('#crimeout');
+    const capOut = document.querySelector('#capout');
+    const jobOut = document.querySelector('#jobout');
 
     myForm.addEventListener('submit', function(event){
         event.preventDefault();
-        const name = document.querySelector('#name').value;
+
+        const firstname = document.querySelector('#firstname').value;
+        const lastname = document.querySelector('#lastname').value;
         const value = document.querySelector('#value').value;
         const crime = document.querySelector('#crime').value;
+        const crime2 = document.querySelector('#crime2').value;
         const capture = document.querySelector('#capture').value;
         const job = document.querySelector('#job').value;
 
-        // document.querySelector('submit').addEventListener('click', function() {
-        //     document.querySelector('#forminput').style.display = 'none';
-        //     document.querySelector('submit').style.display = 'none';
-        //     document.querySelector('#formoutput').className = "showing";
-        // })
-        var formData = document.querySelectorAll("input[type=text");
-        for (var eachField of formData){
-            eachField.value = "";
+        console.log("first name = ", firstname);
+        console.log("last name = ", lastname);
+        console.log("value = ", value);
+        console.log("crime = ", crime);
+        console.log("crime = ", crime2);
+        console.log("capture = ", capture);
+        console.log("job = ", job);
+
+        if(firstname && lastname && value && crime && crime2 && capture && job){
+            if(job == "Pirate"){
+                document.querySelector('#formoutput').className = "showing";
+                nameOut.textContent = `${firstname}·D·${lastname}`;
+                valOut.textContent = `${value}.000.000`;
+                crimeOut.textContent = `This pirate has commited ${crime} and ${crime2}.`;
+                capOut.textContent = `Capture: ${capture}`;
+                jobOut.textContent = job;
+            } else{
+                nameOut.textContent = `${firstname}·D·${lastname}`;
+                valOut.textContent = `${value}.000.000`;
+                crimeOut.textContent = `This marine has betrayed us by commiting ${crime} and ${crime2}. Blashphemy!`;
+                capOut.textContent = capture;
+                jobOut.textContent = job;
+            }
+        } else{
+            document.querySelector(`#snail`).className = "showing";
         }
-        var myText;
-        // var myName;
-        // var myValue;
-        // var myCrime;
-        // var myCapture;
-        // var myJob;
-        if(name && value && crime && capture && job){
-            myText = `You have picked ${name}, ${value}, ${crime}, and ${job}`;
-            // myName = `${name}`;
-            // myValue = `${value}`;
-            // myCrime = `${crime}`;
-            // myCapture = `${capture}`;
-            // myJob = `${job}`
-        }
-        else{
-            myText = "Please fill out the form";
-        }
-        madlib.innerHTML = myText;
-        // madName.innerHTML = myName;
-        // madValue.innerHTML = myValue;
-        // madCrime.innerHTML = myCrime;
-        // madCapture.innerHTML = myCapture;
-        // madJob.innerHTML = myJob;
-    //     const formData = document.querySelectorAll("input[type=text]");
-    //     processData(formData);
-    //     // document.getElementById('overlay').className = 'showing';
    });
-
-    // function processData(formData){
-    //     let emptyFields = 0;
-    //     const words = [];
-    //     for (const eachWord of formData){
-    //         if(eachWord.value){
-    //             words.push(eachWord.value);
-    //             eachWord.value = "";
-    //         } else {emptyFields++; }
-    //     }
-    //     if(emptyFields > 0){
-    //         madlib.innerHTML = 'Please fill out the fields';
-    //     }else {makeMadlib(words); }
-    // }
-    
-    // function makeMadlib(wordsArray) {
-    //     const myText = `Here are the words: ${wordsArray[0]}, ${wordsArray[1]}, ${wordsArray[2]}, ${wordsArray[3]}`;
-
-    //     madlib.innerHTML = myText;
-        // var myText;
-        // if(words[0] && words[1] && words[2] && words[3]) {
-        //     myText = `Here are the words: ${words[0]}, ${words[1]}, ${words[2]}, and ${words[3]}`;
-        // }
-        // else{
-        //     myText = "Please complete the form so I can make your Mad Lib!";
-        // }
-        // madlib.innerHTML = myText;
-//     }
 
  })();

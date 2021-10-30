@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;700;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300;400;500&family=Source+Serif+Pro:wght@300;400;600;700;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
         <title>Mad Lib 2.0</title>
         <script src="script.js" defer></script>
@@ -14,17 +14,22 @@
 
         <main>
             <section id="forminput">
-                <article id="madlib"></article>
-
+                <h2 class="hidden">Form</h2>
                 <form id="myform">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname">
+                    <br>
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname">
                     <br>
                     <label for="value">Value</label>
-                    <input type="text" id="value">
+                    <input type="number" id="value">
                     <br>
-                    <label for="crime">Crime</label>
+                    <label for="crime">Crime 1</label>
                     <input type="text" id="crime">
+                    <br>
+                    <label for="crime2">Crime 2</label>
+                    <input type="text" id="crime2">
                     <br>
                     <label for="capture">Capture</label>
                     <select name="capture" id="capture">
@@ -44,15 +49,28 @@
                 </form>
             </section>
 
-            <section id="formoutput" class="showing">
+            <section id="formoutput" class="hidden">
                 <h2>WANTED</h2>
                 <img src="../studio1/images/skull.png" width="320" height="250" alt="skull" id="skull">
-                <h3>DEAD OR ALIVE</h3>
-                <p>Name</p>
-                <p>Numbers</p>
-                <img src="images/decorations.png" width="400" height="280" alt="decor" id="decor">
-                <p>job</p>
+                <h3 id="capout">DEAD OR ALIVE</h3>
+                <p id="nameout">First Name</p>
+                <div class="bell">
+                    <img src="images/bell.png" width="50" height="50" alt="bell" id="bell">
+                    <p id="valout">Value</p>
+                </div>
+                <img src="images/deco.png" width="400" height="280" alt="decor" id="decor">
+                <div id="two">
+                    <p id="crimeout">crime</p>
+                    <p id="jobout">job</p>
+                </div>
             </section>
+
+            <div id="snail" class="hidden">
+                <h1 id="error">Please fill out the form</h1>
+                <div id="snail1">
+                <img src="images/den.png" width="150" height="160" alt="snail">
+                </div>
+            </div>
             <footer>
                 <a href="https://validator.w3.org/check?uri=https://yutakaozeki.github.io/des157/studio1">HTML 5</a>
                 <a href="https://jigsaw.w3.org/css-validator/">CSS</a>

@@ -3,8 +3,9 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
-    font-family: 'Zen Old Mincho', serif;
+    font-family: 'Source Serif Pro', serif;
     color: #6A5147;
+    text-transform: uppercase;
 }
 
 main{
@@ -12,7 +13,6 @@ main{
     width: 1366px;
     height: 768px;
     margin: auto;
-    /* background-color: white; */
     text-align: center;
 }
 
@@ -20,16 +20,73 @@ main section{
     width: 50%;
 }
 
+p{
+    line-height: 0.3em;
+}
+
 h1{
     color: #068C0F;
     text-transform: uppercase;
     text-align: center;
     font-size: 4em;
+    font-weight: 400;
+}
+
+#error{
+    font-size: 3em;
+    padding-top: 30%;
 }
 
 h2{
-    font-size: 50px;
-    font-stretch: condensed;
+    margin-top: 35px;
+    margin-bottom: 5px;
+    font-size: 80px;
+    font-weight: 700;
+    transform: scale(1.2, 1.5);
+    opacity: .7;
+}
+
+h3{
+    font-weight: 400;
+}
+
+#nameout{
+    margin: 0;
+    line-height: 1em;
+    font-weight: 600;
+    font-size: 40px;
+    transform: scale(0.8, 1.5);
+    text-transform: uppercase;
+}
+
+#valout{
+    font-family: 'Red Hat Text', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.bell{
+    margin-left: 120px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+#crimeout{
+    margin: 0;
+    text-align: left;
+    line-height: 1em;
+    padding-left: 100px;
+    width: 220px;
+}
+
+#jobout{
+    padding-top: 20px;
+    font-size: 40px;
+}
+
+#two{
+    column-count: 2;
 }
 
 form{
@@ -41,6 +98,7 @@ form{
     border-style: solid;
     border-color: #068C0F;
     border-width: 12px;
+    text-transform: capitalize;
 }
 
 label,input{
@@ -110,9 +168,27 @@ select{
     right: 10%;
 }
 
-#madlib{
+#snail1 {
     position: absolute;
-    top: 20%;
+    bottom: 30%;
+    right: 0;
+}
+
+#snail:hover {
+    cursor: pointer;
+}
+
+#snail div {
+    animation: animation1 5s ease-in-out infinite alternate;
+}
+
+@keyframes animation1 {
+    from {
+        right: 3%;
+    }
+    to {
+        right: calc(40% - 10px);
+    }
 }
 
 .hidden{
@@ -125,7 +201,7 @@ select{
 
 footer{
     position: absolute;
-    bottom: 50px;
+    bottom: 5%;
     right: 45%;
     font-size: 25px;
 }
