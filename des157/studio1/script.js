@@ -29,6 +29,7 @@
         console.log("job = ", job);
 
         if(firstname && lastname && value && crime && crime2 && capture && job){
+            document.querySelector(`#snail`).className = "hidden";
             if(job == "Pirate"){
                 document.querySelector('#formoutput').className = "showing";
                 nameOut.textContent = `${firstname}·D·${lastname}`;
@@ -36,10 +37,11 @@
                 crimeOut.textContent = `This pirate has commited ${crime} and ${crime2}.`;
                 capOut.textContent = `Capture: ${capture}`;
                 jobOut.textContent = job;
-            } else{
+            } else {
+                document.querySelector('#formoutput').className = "showing";
                 nameOut.textContent = `${firstname}·D·${lastname}`;
                 valOut.textContent = `${value}.000.000`;
-                crimeOut.textContent = `This marine has betrayed us by commiting ${crime} and ${crime2}. Blashphemy!`;
+                crimeOut.textContent = `This marine has betrayed us by commiting ${crime} and ${crime2}. Blasphemy!`;
                 capOut.textContent = capture;
                 jobOut.textContent = job;
             }
