@@ -1,68 +1,160 @@
-/* because the image is large, you don't want to do anything 
-in this script, until  you are sure the image has loaded. */
-window.addEventListener('load', function () {
+(function(){
+    'use strict';
+    console.log('reading js');
+	const myphotos = ["img1.jpg", "img2.jpg", "img3.jpg"];
+	const brianPhotos = ["brian1.jpg", "brian2.jpg", "brian3.jpg", "brian4.jpg"];
+	const tuanPhotos = ["tuan1.jpg", "tuan2.jpg", "tuan3.jpg"];
 
-	//define variables needed
-	const posts = document.querySelectorAll('section');
-	let postTops = [];
-	let pageTop;
-	let counter = 1;
-	let prevCounter = 1;
-	let doneResizing;
+	// const container = document.getElementById('content');
+	// const nextBtn = document.getElementById('next');
+	// const prevBtn = document.getElementById('previous');
+	// const over = document.getElementById("true");
+	// const hi = document.getElementById("try");
 
-	//see below for what this function does
-	resetPagePosition();
+	const brian = document.getElementById("brianImage");
+	let bImage = 0;
+	let bInterval;
 
-	/* Everything in this event handler runs everytime the window 
-	is scrolled just a little bit. Be careful about preformance */
-	window.addEventListener('scroll', function () {
-		pageTop = window.pageYOffset + 300;
-		//console.log(pagetop);
+	const tuan = document.getElementById("tuanImage");
+	let currentImage = 0;
+	let myInterval;
 
-		// if the user is scrolling down the page...
-		if (pageTop > postTops[counter]) {
-			counter++;
-			console.log(`scrolling down ${counter}`);
-		}
-		// if the user is down the page and scrolling up
-		else if (counter > 1 && pageTop < postTops[counter - 1]) {
-			counter--;
-			console.log(`scrolling up ${counter}`);
-		}
+	function swapImage(){
+		myInterval = setInterval(function(){
+			currentImage++;
 
-		// when the section changes...
-		if (counter != prevCounter) {
-			// changes the class name on the image, which activates animation...
-			document.querySelector('figure img').className = 'sect' + counter;
-			prevCounter = counter;
-		}
+			if(currentImage > tuanPhotos.length - 1){
+				currentImage = 0;
+			}
+			tuan.src = `images/tuanPic/${tuanPhotos[currentImage]}`;
+		}, 300);
+	};
 
-	}); // end window scroll function
-
-	// this event handler fires while the window is being resized
-	window.addEventListener('resize', function () {
-
-		clearTimeout(doneResizing);
-		// this runs after the window has stopped being resized...
-		doneResizing = setTimeout(function () {
-
-			resetPagePosition();
-
-		}, 500);
+	document.getElementById('tuan').addEventListener('mouseout', function(){
+		clearInterval(myInterval);
+		console.log("mouseover tuanImage");
 	});
 
-	// this function resets variables, which may have changed based on resizing
-	function resetPagePosition() {
-		postTops = [];
-		posts.forEach(function (post) {
-			postTops.push(Math.floor(post.getBoundingClientRect().top) + window.pageYOffset);
-		});
+	document.getElementById('tuan').addEventListener('mouseover', function(){
+		swapImage();
+	});
 
-		const pagePosition = window.pageYOffset + 300;
-		counter = 0;
 
-		postTops.forEach(function (post) { if (pagePosition > post) { counter++; } });
+	function briImage(){
+		bInterval = setInterval(function(){
+			bImage++;
 
-	}
+			if(bImage > brianPhotos.length - 1){
+				bImage = 0;
+			}
+			brian.src = `images/brianPic/${brianPhotos[bImage]}`;
+		}, 300);
+	};
 
-}); // end window load function
+	document.getElementById('brian').addEventListener('mouseout', function(){
+		clearInterval(bInterval);
+		console.log("mouseover brianImage");
+	});
+
+	document.getElementById('brian').addEventListener('mouseover', function(){
+		briImage();
+	});
+	// const myVar = setInterval(setColor, 500);
+	// const loopT = setInterval(rotateT, 300);
+
+	// function repeatWhileMouseOver(element, action, time){
+	// 	var interval = null;
+	// 	element.addEventListener('mouseover', function(){
+	// 		interval = setInterval (action, time);
+	// 		currentImage++;
+	// 		if (currentImage > (tuanPhotos.length - 1)) {currentImage = 0; }
+	// 	});
+	// 	element.addEventListener('mouseout', function(){
+	// 		clearInterval(interval);
+	// 	})
+	// }
+
+	// var counter = 1;
+	// function count(){
+	// 	console.log(counter++);
+	// }
+	// repeatWhileMouseOver(document.getElementById('name'), swapImage, 500);
+		// tuan.addEventListener("mouseover", function(event){
+		// 	event.preventDefault();
+		// 	// for (i=0;i<tuanPhotos.length;i++)
+		// 	currentImage++;
+		// 	if (currentImage > (tuanPhotos.length - 1)) {currentImage = 0; }
+
+		// 	swapImage();
+		// 	});
+	// tuan.addEventListener('mouseout', function (event){
+	// 	event.preventDefault();
+	// 	currentImage--;
+	// 	if (currentImage <0) {currentImage = tuanPhotos.length - 1}
+		
+	// 	swapImage();
+	// 	});
+
+	// function swapImage(){
+	// 	const newSlide = document.createElement('img');
+	// 	newSlide.src = `images/tuanPic/${tuanPhotos[currentImage]}`;
+	// 	newSlide.className = "fadeinimg";
+	// 	container.appendChild(newSlide);
+	
+	// 	if (container.children.length > 2) {
+	// 		container.removeChild(container.children[0]);
+	// 	}
+	// }
+	// function setColor() {
+	// 	var x = document.body;
+	// 	x.style.backgroundColor = x.style.backgroundColor == "yellow" ? "pink" : "yellow";
+	//   }
+	   
+	// over.addEventListener("click", function (event){
+	// 	clearInterval(myVar);
+	//   });
+
+	// over.addEventListener("mouseout", function(event){
+	// 	clearInterval(myVar);
+	// })
+	// function setColor(){
+	// 	var x = document.body;
+	// 	x.style.backgroundColor = x.style.backgroundColor == "yellow" ? "pink" : "yellow";
+	// }
+
+	// over.addEventListener("mouseover", function(event){
+	// 	clearInterval(myVar);
+	// })
+
+	// over.addEventListener("mouseover", function(event){
+	// 	event.target.style.color = "orange";
+
+	// 	setTimeout(function(){
+	// 		event.target.style.color = "";
+	// 	}, 500);
+	// });
+
+	// over.addEventListener("mouseout", function(event){
+
+	// })
+	// nextBtn.addEventListener('mouseover', function (event){
+	// 	event.preventDefault();
+	// 	currentImage++;
+	// 	if (currentImage > (tuanPhotos.length - 1)) {currentImage = 0; }
+
+	// 	swapImage();
+	// });
+
+	// prevBtn.addEventListener('click', function (event){
+			
+	// 	event.preventDefault();
+	// 		currentImage--;
+	// 		if (currentImage <0) {currentImage = tuanPhotos.length - 1}
+		
+	// 	swapImage();
+	// })
+
+ })();
+// favorite memory of each picture
+// bio of each person
+// 

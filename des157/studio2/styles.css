@@ -1,78 +1,90 @@
-* {
-	box-sizing: border-box;
+body{
+	/* background-image: url("images/house1.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size: cover; */
+	font-family: 'Lato', sans-serif;
 }
 
-body {
-	font-family: Arial;
-	color: #333;
+body::before{
+	content: "";
+	background-color: rgb(70, 70, 70, 0.25);
+}
+#content {
+	margin: 100px auto 20px auto;
+	border: 10px solid #4c4c4c;
+	width: 500px;
+	height: 375px;
+	position: relative;
 }
 
-main {
-	width: 30vw;
-	padding: 20px;
-}
-
-section {
-	height: 100vh;
-}
-
-p {
-	line-height: 1.5em;
-}
-
-figure {
-	display: block;
-	margin: 0;
-	width: 70vw;
-	height: 100vh;
-	position: fixed;
-	top:0;
-	right:0;
-	overflow: hidden;
-}
-
-figure img {
+#content img{
 	position: absolute;
-	transition: all 3s ease;
+	left: 0;
+	top: 0;
 }
 
-.sect1{
-	width: 147vh; /*147% the height of the image is the width ratio*/
-	top:0;
-	left: 50%;
-	transform:translateX(-50%);
+.fadeinimg{
+	animation: fadein 2s;
 }
 
-.sect2,
-.sect3,
-.sect4,
-.sect5,
-.sect6{
-    width: 3768px;
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
-.sect2 {
-    top: 0;
-    left: 0;
+#images{
+	display: flex;
+	column-count: 2;
 }
 
-.sect3 {
-    top: 0;
-    left: calc(-3768px + 70vw);
+#images img{
+	width: 60%;
+}
+/* #content{
+	background-image: url("images/tuanPic/tuan1.jpg");
+} */
+
+#brian {
+	padding-left: 40%;
+}
+#names{
+	display: flex;
+}
+/* #tuan {
+	justify-content: center;
+	height: 100vh;
+}
+#tuan:hover{
+	animation-name: flipG;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	transition: opacity .3s;
+	background-size: cover;
 }
 
-.sect4 {
-	top: calc(-2567px + 100vh);
-    left: 0;
-}
+@keyframes flipG {
+	0% {
+		background-image: url("images/tuanPic/tuan1.jpg");
+	}
+	33% {
+		background-image: url("images/tuanPic/tuan2.jpg");
+	}
+	66%{
+		background-image: url("images/tuanPic/tuan3.jpg");
+	}
+} */
 
-.sect5 {
-    top: calc(-2567px + 100vh);
-    left: calc(-3768px + 70vw);
+#name img{
+	width: 50%;
 }
-
-.sect6 {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+/* 
+#try{
+	background: green;
+	width: 20%;
+} */
