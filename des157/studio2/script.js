@@ -1,25 +1,32 @@
 (function(){
     'use strict';
     console.log('reading js');
-	const myphotos = ["img1.jpg", "img2.jpg", "img3.jpg"];
+	
+	const tuanPhotos = ["tuan1.jpg", "tuan2.jpg", "tuan4.jpg", "tuan3.jpg"];
 	const brianPhotos = ["brian1.jpg", "brian2.jpg", "brian3.jpg", "brian4.jpg"];
-	const tuanPhotos = ["tuan1.jpg", "tuan2.jpg", "tuan3.jpg"];
+	const genPhotos = ["ghom1.jpg", "ghom2.jpg", "ghom3.jpg"];
 
-	// const container = document.getElementById('content');
-	// const nextBtn = document.getElementById('next');
-	// const prevBtn = document.getElementById('previous');
-	// const over = document.getElementById("true");
-	// const hi = document.getElementById("try");
-
-	const brian = document.getElementById("brianImage");
-	let bImage = 0;
-	let bInterval;
-
+	const tuantext = document.querySelector('#tuan');    
 	const tuan = document.getElementById("tuanImage");
 	let currentImage = 0;
 	let myInterval;
 
-	function swapImage(){
+	const briantext = document.querySelector('#brian');
+	const brian = document.getElementById("brianImage");
+	let bImage = 0;
+	let bInterval;
+
+	const gentext = document.querySelector('#gen');
+	const gen = document.getElementById("genImage");
+	let gImage = 0;
+	let gInterval;
+
+	tuantext.addEventListener('click', function(event){
+		event.target.style.backgroundColor = "red";
+		// document.getElementById('tuanImage').className = 'showing';
+	})
+
+	function tuanImage(){
 		myInterval = setInterval(function(){
 			currentImage++;
 
@@ -27,18 +34,29 @@
 				currentImage = 0;
 			}
 			tuan.src = `images/tuanPic/${tuanPhotos[currentImage]}`;
-		}, 300);
+		}, 150);
 	};
 
-	document.getElementById('tuan').addEventListener('mouseout', function(){
+	tuantext.addEventListener('mouseout', function(){
 		clearInterval(myInterval);
-		console.log("mouseover tuanImage");
+		document.getElementById('tuanImage').className = 'hidden';
 	});
 
-	document.getElementById('tuan').addEventListener('mouseover', function(){
-		swapImage();
+	tuantext.addEventListener('mouseover', function(){
+		event.preventDefault;
+		tuanImage();
+		document.getElementById('tuanImage').className = 'showing';
 	});
 
+	// tuan.addEventListener('mouseout', function (event){
+	// 	event.preventDefault();
+	// 	currentImage--;
+	// 	if (currentImage <0) {currentImage = tuanPhotos.length - 1}
+
+	briantext.addEventListener('click', function(event){
+		event.target.style.backgroundColor = "red";
+		// document.getElementById('tuanImage').className = 'showing';
+	})
 
 	function briImage(){
 		bInterval = setInterval(function(){
@@ -48,113 +66,46 @@
 				bImage = 0;
 			}
 			brian.src = `images/brianPic/${brianPhotos[bImage]}`;
-		}, 300);
+			const briSlide = document.createElement('img');
+		}, 150);
 	};
 
 	document.getElementById('brian').addEventListener('mouseout', function(){
 		clearInterval(bInterval);
-		console.log("mouseover brianImage");
+		document.getElementById('brianImage').className = 'hidden';
 	});
 
 	document.getElementById('brian').addEventListener('mouseover', function(){
+		event.preventDefault;
 		briImage();
+		document.getElementById('brianImage').className = 'showing';
 	});
-	// const myVar = setInterval(setColor, 500);
-	// const loopT = setInterval(rotateT, 300);
 
-	// function repeatWhileMouseOver(element, action, time){
-	// 	var interval = null;
-	// 	element.addEventListener('mouseover', function(){
-	// 		interval = setInterval (action, time);
-	// 		currentImage++;
-	// 		if (currentImage > (tuanPhotos.length - 1)) {currentImage = 0; }
-	// 	});
-	// 	element.addEventListener('mouseout', function(){
-	// 		clearInterval(interval);
-	// 	})
-	// }
+	gentext.addEventListener('click', function(event){
+		event.target.style.backgroundColor = "red";
+		// document.getElementById('tuanImage').className = 'showing';
+	})
 
-	// var counter = 1;
-	// function count(){
-	// 	console.log(counter++);
-	// }
-	// repeatWhileMouseOver(document.getElementById('name'), swapImage, 500);
-		// tuan.addEventListener("mouseover", function(event){
-		// 	event.preventDefault();
-		// 	// for (i=0;i<tuanPhotos.length;i++)
-		// 	currentImage++;
-		// 	if (currentImage > (tuanPhotos.length - 1)) {currentImage = 0; }
+	function genImage(){
+		gInterval = setInterval(function(){
+			gImage++;
 
-		// 	swapImage();
-		// 	});
-	// tuan.addEventListener('mouseout', function (event){
-	// 	event.preventDefault();
-	// 	currentImage--;
-	// 	if (currentImage <0) {currentImage = tuanPhotos.length - 1}
-		
-	// 	swapImage();
-	// 	});
+			if(gImage > genPhotos.length - 1){
+				gImage = 0;
+			}
+			gen.src = `images/genniferPic/${genPhotos[gImage]}`;
+		}, 150);
+	};
 
-	// function swapImage(){
-	// 	const newSlide = document.createElement('img');
-	// 	newSlide.src = `images/tuanPic/${tuanPhotos[currentImage]}`;
-	// 	newSlide.className = "fadeinimg";
-	// 	container.appendChild(newSlide);
-	
-	// 	if (container.children.length > 2) {
-	// 		container.removeChild(container.children[0]);
-	// 	}
-	// }
-	// function setColor() {
-	// 	var x = document.body;
-	// 	x.style.backgroundColor = x.style.backgroundColor == "yellow" ? "pink" : "yellow";
-	//   }
-	   
-	// over.addEventListener("click", function (event){
-	// 	clearInterval(myVar);
-	//   });
+	document.getElementById('gen').addEventListener('mouseout', function(){
+		clearInterval(gInterval);
+		document.getElementById('genImage').className = 'hidden';
+	});
 
-	// over.addEventListener("mouseout", function(event){
-	// 	clearInterval(myVar);
-	// })
-	// function setColor(){
-	// 	var x = document.body;
-	// 	x.style.backgroundColor = x.style.backgroundColor == "yellow" ? "pink" : "yellow";
-	// }
-
-	// over.addEventListener("mouseover", function(event){
-	// 	clearInterval(myVar);
-	// })
-
-	// over.addEventListener("mouseover", function(event){
-	// 	event.target.style.color = "orange";
-
-	// 	setTimeout(function(){
-	// 		event.target.style.color = "";
-	// 	}, 500);
-	// });
-
-	// over.addEventListener("mouseout", function(event){
-
-	// })
-	// nextBtn.addEventListener('mouseover', function (event){
-	// 	event.preventDefault();
-	// 	currentImage++;
-	// 	if (currentImage > (tuanPhotos.length - 1)) {currentImage = 0; }
-
-	// 	swapImage();
-	// });
-
-	// prevBtn.addEventListener('click', function (event){
-			
-	// 	event.preventDefault();
-	// 		currentImage--;
-	// 		if (currentImage <0) {currentImage = tuanPhotos.length - 1}
-		
-	// 	swapImage();
-	// })
+	document.getElementById('gen').addEventListener('mouseover', function(){
+		event.preventDefault;
+		genImage();
+		document.getElementById('genImage').className = 'showing';
+	});
 
  })();
-// favorite memory of each picture
-// bio of each person
-// 
