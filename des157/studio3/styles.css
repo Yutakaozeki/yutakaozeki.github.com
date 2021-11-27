@@ -1,0 +1,168 @@
+body {
+    font-family: Arial;
+    color: #333;
+    padding: 50px;
+    line-height: 1.5em;
+    background-image: url("images/background.png");
+    background-position: center center;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size: cover;
+}
+
+button { 
+    padding: 10px;
+}
+
+div {
+    padding: 20px;
+}
+
+#score{
+    width: 20vw;
+}
+
+#actions {
+    position: absolute;
+    top: 41%;
+    right: 0;
+    background-color: silver;
+    width: 200px;
+}
+
+#hand{
+    position: absolute;
+    top: -500px;
+    left: 50px;
+    z-index: -1;
+}
+
+/* instructions */
+#instructions{
+    position: absolute;
+    bottom: 13%;
+    left: 45%;
+}
+
+#overlay{
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+#overlay article{
+    box-sizing: border-box;
+    background-color: #fff; 
+    padding: 20px;
+    width: 50vw;
+    height: 50vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* position control */
+#gamecontrol{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #9e6a40;
+}
+
+#game{
+    position: absolute;
+    bottom: 35%;
+    left: 38%;
+    width: 200px;
+    padding: 50px;
+    margin-bottom: -50px;
+}
+
+#dice{
+    position: absolute;
+    bottom: 40%;
+    left: 20%;
+    margin-bottom: 40px;
+}
+
+#win{
+    color: white;
+    line-height: 2em;
+    width: 400px;
+}
+
+.turn{
+    position: absolute;
+    bottom: 0;
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: silver;
+    padding: 16px;
+}
+
+.message{
+    color: black;
+    background-color: silver;
+    padding: 16px;
+}
+
+/* player scores */
+#score1{
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    box-sizing: border-box;
+    border: solid;
+    background-color: black;
+    border-color: white;
+    border-width: 10px;
+    border-radius: 20px;
+    color: white;
+    width: 300px;
+}
+
+#score2{
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    box-sizing: border-box;
+    border: solid;
+    background-color: black;
+    border-color: white;
+    border-width: 10px;
+    border-radius: 20px;
+    color: white;
+    width: 300px;
+}
+
+/* overlay actions */
+.hidden {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
+
+/* footer */
+footer{
+    position: absolute;
+    bottom: 2%;
+    right: 48%;
+    font-size: 14px;
+}
+
+footer a{
+    color: #929292;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: #ffffff;
+}
