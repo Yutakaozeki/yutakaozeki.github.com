@@ -1,0 +1,45 @@
+body{
+    font-family: 'EB Garamond', serif;
+    background-color: rgb(248, 247, 245);
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+h2{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+p{
+    max-width: 70%;
+    margin-left: 13%;
+}
+
+.hidden{
+    display: none;
+}
+
+footer{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    background-color: black;
+    margin-top: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 40%;
+    gap: 10px;
+}
+
+footer a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color:  #bdbdbd;
+}
