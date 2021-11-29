@@ -121,7 +121,7 @@ h2{
 
 section{
     height: 600px;
-    background-image: url('Images/section.png');
+    /* background-image: url('Images/section.png'); */
     /* background: url('Images/section.png') no-repeat left center; */
     background-size: 400px 600px;
     background-position: right;
