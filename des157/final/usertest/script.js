@@ -21,6 +21,8 @@
 	let gImage = 0;
 	let gInterval;
 
+	alert("Hello! Please complete the following tasks: 1. Hover over the two names Tuan and Brian. 2. Click on the Brian text once you have hovered it and then close it. 3. Examine the pagination bar on the side of the screen. ");
+
 	tuantext.addEventListener('click', function(event){
 		event.target.style.backgroundColor = "red";
 		// document.getElementById('tuanImage').className = 'showing';

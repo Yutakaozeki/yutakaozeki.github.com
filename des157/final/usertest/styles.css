@@ -9,7 +9,6 @@ body{
 	max-height: 768px;
 }
 
-/* fade in animation */
 .fadeinimg{
 	animation: fadein 2s;
 }
@@ -23,7 +22,6 @@ body{
 	}
 }
 
-/* background slides */
 #slide{
 	position: relative;
 	top: 0;
@@ -91,12 +89,17 @@ body{
 #brian:hover{
 	color: blue;
 }
+
+#tuan:hover{
+	color: blue;
+}
+
 #names{
 	display: flex;
 }
 
 /* pagination */
-	.pagination {
+.pagination {
 	display: grid;
 	position: absolute;
 	top: 40%;
@@ -137,7 +140,6 @@ body{
 	width: 100vw;
 	height: 100vh;
 }
-
 #overlay article{
     box-sizing: border-box;
     background-color: #fff; 
