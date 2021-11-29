@@ -126,6 +126,11 @@ body{
   
   .pagination a:hover:not(.active) {background-color: #ddd;}
 
+  .selected {
+	background: rgba(254,0,187,1.00);
+	transition: all 1s;
+}
+
 /* overlays */
 
 #boverlay{

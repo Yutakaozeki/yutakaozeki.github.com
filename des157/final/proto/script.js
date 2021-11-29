@@ -98,12 +98,12 @@
 		}, 150);
 	};
 
-	document.getElementById('gen').addEventListener('mouseout', function(){
+	document.getElementById('gennifer').addEventListener('mouseout', function(){
 		clearInterval(gInterval);
 		document.getElementById('genImage').className = 'hidden';
 	});
 
-	document.getElementById('gen').addEventListener('mouseover', function(){
+	document.getElementById('gennifer').addEventListener('mouseover', function(){
 		event.preventDefault;
 		genImage();
 		document.getElementById('genImage').className = 'showing';
