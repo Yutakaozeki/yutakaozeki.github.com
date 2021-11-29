@@ -103,6 +103,10 @@ body{
 	top: 100px;
 	z-index: 1;
 }
+
+#boverlay{
+	color: white;
+}
 /* pagination */
 .pagination {
 	display: grid;

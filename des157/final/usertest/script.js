@@ -50,11 +50,6 @@
 		document.getElementById('tuanImage').className = 'showing';
 	});
 
-	// tuan.addEventListener('mouseout', function (event){
-	// 	event.preventDefault();
-	// 	currentImage--;
-	// 	if (currentImage <0) {currentImage = tuanPhotos.length - 1}
-
 	briantext.addEventListener('click', function(event){
 		event.preventDefault;
 		document.getElementById('boverlay').className = 'showing';
