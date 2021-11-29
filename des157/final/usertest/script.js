@@ -23,32 +23,33 @@
 
 	alert("Hello! Please complete the following tasks: 1. Hover over the two names Tuan and Brian. 2. Click on the Brian text once you have hovered it and then close it. 3. Examine the pagination bar on the side of the screen. ");
 
-	tuantext.addEventListener('click', function(event){
-		event.target.style.backgroundColor = "red";
-		// document.getElementById('tuanImage').className = 'showing';
-	})
+	// // tuan interactions
+	// tuantext.addEventListener('click', function(event){
+	// 	event.target.style.backgroundColor = "red";
+	// 	// document.getElementById('tuanImage').className = 'showing';
+	// })
 
-	function tuanImage(){
-		myInterval = setInterval(function(){
-			currentImage++;
+	// function tuanImage(){
+	// 	myInterval = setInterval(function(){
+	// 		currentImage++;
 
-			if(currentImage > tuanPhotos.length - 1){
-				currentImage = 0;
-			}
-			tuan.src = `images/tuanPic/${tuanPhotos[currentImage]}`;
-		}, 150);
-	};
+	// 		if(currentImage > tuanPhotos.length - 1){
+	// 			currentImage = 0;
+	// 		}
+	// 		tuan.src = `images/tuanPic/${tuanPhotos[currentImage]}`;
+	// 	}, 150);
+	// };
 
-	tuantext.addEventListener('mouseout', function(){
-		clearInterval(myInterval);
-		document.getElementById('tuanImage').className = 'hidden';
-	});
+	// tuantext.addEventListener('mouseout', function(){
+	// 	clearInterval(myInterval);
+	// 	document.getElementById('tuanImage').className = 'hidden';
+	// });
 
-	tuantext.addEventListener('mouseover', function(){
-		event.preventDefault;
-		tuanImage();
-		document.getElementById('tuanImage').className = 'showing';
-	});
+	// tuantext.addEventListener('mouseover', function(){
+	// 	event.preventDefault;
+	// 	tuanImage();
+	// 	document.getElementById('tuanImage').className = 'showing';
+	// });
 
 	briantext.addEventListener('click', function(event){
 		event.preventDefault;
@@ -86,31 +87,31 @@
 	// 	document.getElementById('brianImage').className = 'showing';
 	// });
 
-	gentext.addEventListener('click', function(event){
-		event.target.style.backgroundColor = "red";
-		// document.getElementById('tuanImage').className = 'showing';
-	})
+	// gentext.addEventListener('click', function(event){
+	// 	event.target.style.backgroundColor = "red";
+	// 	// document.getElementById('tuanImage').className = 'showing';
+	// })
 
-	function genImage(){
-		gInterval = setInterval(function(){
-			gImage++;
+	// function genImage(){
+	// 	gInterval = setInterval(function(){
+	// 		gImage++;
 
-			if(gImage > genPhotos.length - 1){
-				gImage = 0;
-			}
-			gen.src = `images/genniferPic/${genPhotos[gImage]}`;
-		}, 150);
-	};
+	// 		if(gImage > genPhotos.length - 1){
+	// 			gImage = 0;
+	// 		}
+	// 		gen.src = `images/genniferPic/${genPhotos[gImage]}`;
+	// 	}, 150);
+	// };
 
-	document.getElementById('gennifer').addEventListener('mouseout', function(){
-		clearInterval(gInterval);
-		document.getElementById('genImage').className = 'hidden';
-	});
+	// document.getElementById('gennifer').addEventListener('mouseout', function(){
+	// 	clearInterval(gInterval);
+	// 	document.getElementById('genImage').className = 'hidden';
+	// });
 
-	document.getElementById('gennifer').addEventListener('mouseover', function(){
-		event.preventDefault;
-		genImage();
-		document.getElementById('genImage').className = 'showing';
-	});
+	// document.getElementById('gennifer').addEventListener('mouseover', function(){
+	// 	event.preventDefault;
+	// 	genImage();
+	// 	document.getElementById('genImage').className = 'showing';
+	// });
 
  })();
