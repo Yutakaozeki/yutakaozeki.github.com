@@ -61,17 +61,11 @@ body{
 	position: absolute;
 	top: 25%;
 	left: 5%;
-	width: 70%;
 	height: auto;
 	max-width: 100%;
 	float: left;
 	display: flex;
 	column-count: 2;
-}
-
-#images img{
-	width: 50%;
-	height: 50%;
 }
 
 #names{
@@ -146,8 +140,9 @@ body{
 	top: 50px;
 	margin: 50px;
 	padding: 50px;
-	width: 100vw;
-	height: 100vh;
+	padding-left: 200px;
+	width: 500px;
+	height: 500px;
 }
 #overlay article{
     box-sizing: border-box;

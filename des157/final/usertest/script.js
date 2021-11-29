@@ -72,7 +72,7 @@
 				bImage = 0;
 			}
 			brian.src = `images/brianPic/${brianPhotos[bImage]}`;
-		}, 150);
+		}, 400);
 	};
 
 	// document.getElementById('brian').addEventListener('mouseout', function(){
