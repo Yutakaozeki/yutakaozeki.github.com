@@ -3,7 +3,7 @@
     console.log('reading js');
 	
 	const tuanPhotos = ["tuan1.jpg", "tuan2.jpg", "tuan4.jpg", "tuan3.jpg"];
-	const brianPhotos = ["brian1.jpg", "brian2.jpg", "brian3.jpg", "brian4.jpg"];
+	const brianPhotos = ["brian1.jpg", "brian2.jpg", "brian3.jpg"];
 	const genPhotos = ["ghom1.jpg", "ghom2.jpg", "ghom3.jpg"];
 
 	const tuantext = document.querySelector('#tuan');    
@@ -56,12 +56,19 @@
 	// 	if (currentImage <0) {currentImage = tuanPhotos.length - 1}
 
 	briantext.addEventListener('click', function(event){
+		event.preventDefault;
 		document.getElementById('boverlay').className = 'showing';
+		briImage();
+		document.getElementById('brianImage').className = 'showing';
 	})
+	
 	document.querySelector('.close').addEventListener('click', function(event){
 		event.preventDefault();
 		document.getElementById('boverlay').className = 'hidden';
+		clearInterval(bInterval);
+		document.getElementById('brianImage').className = 'hidden';
 		})
+
 	function briImage(){
 		bInterval = setInterval(function(){
 			bImage++;
@@ -73,16 +80,16 @@
 		}, 150);
 	};
 
-	document.getElementById('brian').addEventListener('mouseout', function(){
-		clearInterval(bInterval);
-		document.getElementById('brianImage').className = 'hidden';
-	});
+	// document.getElementById('brian').addEventListener('mouseout', function(){
+	// 	clearInterval(bInterval);
+	// 	document.getElementById('brianImage').className = 'hidden';
+	// });
 
-	document.getElementById('brian').addEventListener('mouseover', function(){
-		event.preventDefault;
-		briImage();
-		document.getElementById('brianImage').className = 'showing';
-	});
+	// document.getElementById('brian').addEventListener('mouseover', function(){
+	// 	event.preventDefault;
+	// 	briImage();
+	// 	document.getElementById('brianImage').className = 'showing';
+	// });
 
 	gentext.addEventListener('click', function(event){
 		event.target.style.backgroundColor = "red";
@@ -100,12 +107,12 @@
 		}, 150);
 	};
 
-	document.getElementById('gen').addEventListener('mouseout', function(){
+	document.getElementById('gennifer').addEventListener('mouseout', function(){
 		clearInterval(gInterval);
 		document.getElementById('genImage').className = 'hidden';
 	});
 
-	document.getElementById('gen').addEventListener('mouseover', function(){
+	document.getElementById('gennifer').addEventListener('mouseover', function(){
 		event.preventDefault;
 		genImage();
 		document.getElementById('genImage').className = 'showing';

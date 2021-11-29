@@ -98,6 +98,11 @@ body{
 	display: flex;
 }
 
+#brianImage{
+	position: relative;
+	top: 100px;
+	z-index: 1;
+}
 /* pagination */
 .pagination {
 	display: grid;
