@@ -3,10 +3,17 @@ body{
     background-color: rgb(248, 247, 245);
     font-size: 1em;
     line-height: 1.4em;
+    max-width: 100%
 }
 
-h2{
+h1{
     text-align: center;
+    padding-bottom: 50px;
+}
+h2{
+    text-align: left;
+    max-width: 90%;
+    padding-left: 40px;
 }
 
 h3{
@@ -16,7 +23,15 @@ h3{
 
 p{
     max-width: 70%;
-    margin-left: 13%;
+    margin-left: 40px;
+}
+
+img{
+    padding-bottom: 50px;
+    content: center;
+}
+#images{
+    margin-left: 40px;
 }
 
 .hidden{
