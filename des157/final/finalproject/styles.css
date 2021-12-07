@@ -66,9 +66,9 @@ body {
     display: flex;
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 70px;
     gap: 20px;
-    font-size: 12px;
+	font-size: 12px;
 }
 
 #brian,
@@ -85,31 +85,10 @@ body {
 /* hovers */
 
 #brian:hover,
-#fiona:hover {
-    color: blue;
+#fiona:hover, #gennifer:hover, #kevin:hover, #steven:hover, #tuan:hover, #wislam:hover {
+    color: rgb(128, 128, 128);
     cursor: pointer;
 }
-
-#gennifer:hover {
-    color: blue;
-}
-
-#kevin:hover {
-    color: blue;
-}
-
-#steven:hover {
-    color: blue;
-}
-
-#tuan:hover {
-    color: blue;
-}
-
-#wislam:hover {
-    color: blue;
-}
-
 
 /* overlays */
 
@@ -134,15 +113,14 @@ body {
     z-index: 1;
 }
 
-#overlay h1 {
-    margin-left: 10%;
+h2 {
+    margin-left: 8%;
 }
 
 p {
-    margin-left: 10%;
+    margin-left: 8%;
     max-width: 35%;
 }
-
 
 /* image position */
 
@@ -155,7 +133,7 @@ p {
 #wislamImage {
     position: absolute;
     top: 110px;
-    right: 15%;
+    right: 12%;
     max-width: 100%;
     z-index: 2;
 }
