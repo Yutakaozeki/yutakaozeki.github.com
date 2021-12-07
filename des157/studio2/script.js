@@ -2,8 +2,8 @@
     'use strict';
     console.log('reading js');
 	
-	const tuanPhotos = ["tuan1.jpg", "tuan2.jpg", "tuan4.jpg", "tuan3.jpg"];
-	const brianPhotos = ["brian1.jpg", "brian2.jpg", "brian3.jpg", "brian4.jpg"];
+	const tuanPhotos = ["tuan1.jpg", "tuan2.jpg", "tuan3.jpg"];
+	const brianPhotos = ["brian1.jpg", "brian2.jpg", "brian3.jpg"];
 	const genPhotos = ["ghom1.jpg", "ghom2.jpg", "ghom3.jpg"];
 
 	const tuantext = document.querySelector('#tuan');    
@@ -33,7 +33,7 @@
 			if(currentImage > tuanPhotos.length - 1){
 				currentImage = 0;
 			}
-			tuan.src = `images/tuanPic/${tuanPhotos[currentImage]}`;
+			tuan.src = `../final/finalproject/images/tuanPic/${tuanPhotos[currentImage]}`;
 		}, 150);
 	};
 
@@ -65,7 +65,7 @@
 			if(bImage > brianPhotos.length - 1){
 				bImage = 0;
 			}
-			brian.src = `images/brianPic/${brianPhotos[bImage]}`;
+			brian.src = `../final/finalproject/images/brianPic/${brianPhotos[bImage]}`;
 			const briSlide = document.createElement('img');
 		}, 150);
 	};
@@ -93,7 +93,7 @@
 			if(gImage > genPhotos.length - 1){
 				gImage = 0;
 			}
-			gen.src = `images/genniferPic/${genPhotos[gImage]}`;
+			gen.src = `../final/finalproject/images/genniferPic/${genPhotos[gImage]}`;
 		}, 150);
 	};
 
